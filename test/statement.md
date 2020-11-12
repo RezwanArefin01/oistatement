@@ -1,5 +1,5 @@
 # Powerful Tree
-Alice has found a strange rooted tree on $n$ vertices where each vertex contains a certain value. The vertices are numbered from $1$ to $n$ and the root is numbered $1$. Vertex $i$ contains the integer value $a_i$. She decided to do an experiment on it via the following process.
+Alice has found a strange rooted tree on $n$ vertices where each vertex contains a certain value. The vertices are numbered from $1$ to $n$ and the root is numbered $1$. Vertex $i$ contains an integer value $a_i$. She decided to do an experiment on it via the following process.
 
 * Some definitions first. A vertex $u$ is an **ancestor** a vertex $v$ if and only if $u$ belongs to the path from the vertex $v$ to the root. In particular, a vertex is $u$ an ancestor of itself. The **subtree** of a vertex $u$ is the set of vertices $v$ such that $u$ is an ancestor of $v$.
 * Alice chooses a set $S$ of vertices from the tree that satisfies the following condition: for any two different vertices $u, v$ in $S$ &ndash; $u$ is not an ancestor of $v$, and $v$ is not an ancestor of $u$.

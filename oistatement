@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import sys, os, json, pdfkit
+import sys, os, json, pdfkit, tempfile
 from uuid import uuid4
 from xvfbwrapper import Xvfb
 from jinja2 import Template
@@ -41,10 +41,12 @@ pdf_options = {
 
 # Make PDF
 html = template.render(context)
-html_path = '/tmp/{}.html'.format(str(uuid4()))
+html_path = os.path.join(tempfile.gettempdir(), '{}.html'.format(str(uuid4())))
+
 with open(html_path, 'wb') as f:
     f.write(html.encode('utf-8'))
 # open("out.html", 'wb').write(html.encode('utf-8'))
+
 with Xvfb():
     pdfkit.from_file(html_path, task_pdf, options=pdf_options)
 os.remove(html_path)
