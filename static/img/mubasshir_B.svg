@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Layer_1"
+   data-name="Layer 1"
+   viewBox="0 0 616.14325 290"
+   version="1.1"
+   sodipodi:docname="mubasshir_B.svg"
+   width="616.14325"
+   height="290"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <metadata
+     id="metadata35">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="694"
+     id="namedview33"
+     showgrid="false"
+     inkscape:zoom="0.6875"
+     inkscape:cx="201.87824"
+     inkscape:cy="344.64427"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1" />
+  <defs
+     id="defs4">
+    <style
+       id="style2">.cls-1,.cls-4{fill:none;stroke-miterlimit:10;}.cls-1{stroke:#ff1a00;stroke-width:20px;}.cls-2{fill:#ff1a00;}.cls-3,.cls-5{fill:#2c4816;}.cls-4{stroke:#2c4816;stroke-width:7px;}.cls-5{font-size:191.94px;font-family:Gotham-Book, Gotham;}</style>
+  </defs>
+  <title
+     id="title6">BdOI Logo</title>
+  <circle
+     class="cls-1"
+     cx="356.64328"
+     cy="202.99998"
+     r="77"
+     id="circle8" />
+  <circle
+     class="cls-2"
+     cx="356.14328"
+     cy="21"
+     r="21"
+     id="circle10" />
+  <circle
+     class="cls-2"
+     cx="266.14328"
+     cy="111"
+     r="21"
+     id="circle12" />
+  <circle
+     class="cls-2"
+     cx="142.14328"
+     cy="111"
+     r="21"
+     id="circle14" />
+  <circle
+     class="cls-2"
+     cx="482.14328"
+     cy="147"
+     r="21"
+     id="circle16" />
+  <circle
+     class="cls-2"
+     cx="595.14325"
+     cy="34"
+     r="21"
+     id="circle18" />
+  <rect
+     class="cls-3"
+     x="474.65329"
+     y="179.99998"
+     width="14.98"
+     height="100"
+     id="rect20" />
+  <line
+     class="cls-4"
+     x1="375.14328"
+     y1="40"
+     x2="463.14328"
+     y2="128"
+     id="line22" />
+  <line
+     class="cls-4"
+     x1="335.14328"
+     y1="40"
+     x2="282.64328"
+     y2="92.5"
+     id="line24" />
+  <line
+     class="cls-4"
+     x1="241.01328"
+     y1="111.25"
+     x2="166.77328"
+     y2="111.25"
+     id="line26" />
+  <line
+     class="cls-4"
+     x1="577.64325"
+     y1="51.5"
+     x2="503.14328"
+     y2="126"
+     id="line28" />
+  <text
+     class="cls-5"
+     transform="scale(0.99498744,1.0050378)"
+     id="text30"
+     x="-18.650185"
+     y="278.73578"
+     style="stroke-width:0.994987">BD</text>
+</svg>

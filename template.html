@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>{{task_name}} - {{contest}}</title>
+    <link rel="shortcut icon" href="{{static_path}}/img/favicon.ico"/>
+    
+    <link rel="stylesheet" href="{{static_path}}/libs/markdown/katex.css">
+    <link rel="stylesheet" href="{{static_path}}/css/markdown.css">
+    <link rel="stylesheet" href="{{static_path}}/css/styles.css">
+    <link rel="stylesheet" href="{{static_path}}/css/pdf.css">
+
+    <script type="text/javascript" src="{{static_path}}/libs/jquery/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="{{static_path}}/libs/markdown/marked.js"></script>
+    <script type="text/javascript" src="{{static_path}}/js/init-marked.js"></script>
+    <script type="text/javascript" src="{{static_path}}/libs/markdown/katex.js"></script>
+    <script type="text/javascript" src="{{static_path}}/libs/markdown/auto-render.min.js"></script>
+</head>
+
+<body>
+    <div class="markdown-body pdf">
+        <div class="header">
+            <div class="logo">
+                <img src="{{static_path}}/img/logo.svg" />
+            </div>
+            
+            <div class="meta">
+                <div>{{task_name}}</div>
+				<div>{{contest}} Tasks</div>
+                <div>{{language}}</div>
+            </div>
+
+            <div style="clear: both;"></div>
+            <hr>
+        </div>
+
+        <div id="markdown" style="display: none">{{content}}</div>
+        <div id="preview" class="rendered_content" dir="ltr" lang="{{language}}"></div>
+    </div>
+</body>
+<script>
+
+    $(document).ready(function() {
+        var mutated = Date.now();
+        var observer = new MutationObserver(function() { mutated = Date.now(); });
+        function checkMutation() {
+            if(Date.now() - 1000 < mutated)
+                return setTimeout(checkMutation, 100);
+            window.print();
+        }
+        observer.observe(document, {childList: true, subtree: true});
+
+        text = $('#markdown').text();
+        marked.setOptions({smartypants: true});
+        $('#preview').html(marked(text));
+        renderMathInElement(document.getElementById('preview'));
+
+        setTimeout(checkMutation, 100);
+    });
+
+    IMAGES_URL = '{{ images_path }}';
+
+</script>
+</html>
