@@ -51,7 +51,7 @@
         }
         observer.observe(document, {childList: true, subtree: true});
 
-        text = $('#markdown').text();
+        text = $('#markdown')[0].innerHTML;
         marked.setOptions({smartypants: true});
         $('#preview').html(marked(text));
         renderMathInElement(document.getElementById('preview'));

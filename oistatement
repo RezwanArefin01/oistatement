@@ -41,7 +41,7 @@ pdf_options = {
 
 # Make PDF
 html = template.render(context)
-html_path = os.path.join(tempfile.gettempdir(), '{}.html'.format(str(uuid4())))
+html_path = os.path.join(root, '.{}.html'.format(str(uuid4())))
 
 with open(html_path, 'wb') as f:
     f.write(html.encode('utf-8'))
