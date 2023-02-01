@@ -4,15 +4,13 @@ import sys, os, json, tempfile, shutil, subprocess
 from uuid import uuid4
 from jinja2 import Template
 
-## Detect if chrome or brave is installed
-programs = ["chrome", "brave", "google-chrome", "google-chrome-stable"]
+# Detect if chrome or brave is installed
+programs = ["chrome", "brave", "google-chrome", "google-chrome-stable", "chromium"]
 browser = None
-
 for program in programs:
     if shutil.which(program) is not None:
         browser = program
         break 
-
 if browser is None:
     print("Please install one of the following programs:", ",".join(programs))
     sys.exit(0)
@@ -24,7 +22,7 @@ task_pdf = os.path.join(root, os.path.splitext(task_md)[0] + '.pdf')
 task_info = json.loads(open(task_json, 'r').read())
 script_dir = os.path.dirname(os.path.realpath(__file__))
 
-# Render PDF Template
+# Render HTML
 template_html = os.path.join(script_dir, "template.html")
 with open(template_html) as f:
     template = Template(f.read())
@@ -37,14 +35,12 @@ context = {
     'images_path': root,
     'static_path': os.path.join(script_dir, 'static'),
 }
-
-# Make PDF
 html = template.render(context)
 html_path = os.path.join(root, '.{}.html'.format(str(uuid4())))
-
 with open(html_path, 'wb') as f:
     f.write(html.encode('utf-8'))
 
+# Print to pdf
 subprocess.call([browser, 
     "-headless", 
     "--disable-cpu",
@@ -58,16 +54,11 @@ subprocess.call([browser,
 os.remove(html_path)
 
 # Add footer
-color = '-color "0.4 0.4 0.4" '
 subprocess.call(['cpdf', 
     "-add-text", "\"{0} (%Page of %EndPage)   \"".format(task_info['task_name']), 
-    "-font", "\"Arial\"", 
+    "-font", "Arial", 
     "-color", "010102", 
     "-font-size", "10", 
     "-bottomright", ".62in",
     task_pdf,
     "-o", task_pdf])
-
-# cmd = ('cpdf -add-text "{0} (%Page of %EndPage)   " -font "Arial" ' + '-color "0.4 0.4 0.4" ' +
-#       '-font-size 10 -bottomright .62in "{1}" -o "{1}"').format(os.path.join(script_dir, 'cpdf', 'cpdf'), task_info['task_name'].capitalize(), task_pdf)
-# os.system(cmd)
