@@ -1,13 +1,14 @@
 # OIStatement
-Based on [IOI-Translation](https://github.com/ioi-2019/ioi-translation) system, I lightweight tool to build pdf from markdown. Intended to be used in preparation of OI-styled statement. 
+Based on [IOI-Translation](https://github.com/ioi-2019/ioi-translation) system, a lightweight tool to build pdf from markdown. Intended to be used in preparation of OI-styled statement. 
 
 # Installation:
 1. Clone the repository. 
 2. Add the directory oistatement to your `PATH` variable.  
-3. For Arch based distros, install the following packages: `wkhtmltopdf`, `xorg-server-xvfb`, and `ttf-ms-fonts` from AUR. 
-For debian based distros, install the packages: `ttf-mscorefonts-installer`, `wkhtmltopdf`,  `xvfb`. 
-4. Install the python packages: `xvfbwrapper`,  `pdfkit`, and `jinja2`
-5. Now you should be able to compile the given test markdown file with `oistatement english.md`. 
+3. Have either `chrome` or `brave` available.
+4. For Arch based distros, install the following packages from AUR: `cpdf`, `ttf-ms-fonts`.
+    - For other distribution, you need to figure out the equivalent.
+5. Install the python package: `jinja2`.
+6. Now you should be able to compile the given test markdown file with `oistatement english.md`. 
 
 # Usages 
 Change `static/img/logo.svg` acording to your needs. 

@@ -115,9 +115,13 @@ div.pdf {
 }
 
 @media print {
+    
+    @page {
+      size: A4; 
+      margin: 0.62in 0.75in 1in 0.75in;
+    }
 
     body {
-        zoom: 1.2;
         margin: 0;
         background-color: white;
     }
