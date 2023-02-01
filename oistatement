@@ -50,6 +50,7 @@ subprocess.call([browser,
     "--disable-popup-blocking", 
     "--run-all-compositor-stages-before-draw"
     "--disable-checker-imaging", 
+    "--virtual-time-budget=10000",
     html_path])
 os.remove(html_path)
 
