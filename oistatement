@@ -46,7 +46,7 @@ subprocess.call([browser,
     "--disable-cpu",
     "--print-to-pdf={}".format(task_pdf), 
     "--disable-extensions",
-    "--print-to-pdf-no-header",
+    "--no-pdf-header-footer",
     "--disable-popup-blocking", 
     "--run-all-compositor-stages-before-draw"
     "--disable-checker-imaging", 
